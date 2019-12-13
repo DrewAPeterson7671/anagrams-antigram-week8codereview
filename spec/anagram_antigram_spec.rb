@@ -30,6 +30,9 @@ describe('Anagrams#compare_words') do
     anagrams7 = Anagrams.new("FHC", "Gerald")
     expect(anagrams7.compare_words()).to(eq("You need to input actual words!"))
   end
-  
+  it("Test to see if the words are antigrams") do
+    anagrams8 = Anagrams.new("Hi", "Bye")
+    expect(anagrams8.compare_words()).to(eq("These words are antigrams!"))
+  end
 
 end

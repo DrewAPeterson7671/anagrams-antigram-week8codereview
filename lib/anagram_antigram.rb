@@ -16,6 +16,8 @@ class Anagrams
     word_dif = @word1.gsub(/[#{@word2}]/i, '') + @word2.gsub(/[#{@word1}]/i, '')
     if word_dif == ""
       return "These words are anagrams"
+    elsif word_dif.length == @word1.length + @word2.length
+      return "These words are antigrams!"
     elsif word_dif != ""
       return "These words are not anagrams.  The letter(s) that are not in both words are: #{word_dif}"
     else
