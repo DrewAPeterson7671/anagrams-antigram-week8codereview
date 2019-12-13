@@ -12,17 +12,12 @@ _The application checks if two words input by the user are anagrams or antigrams
 
 | Behavior | Input Example | Output Example |
 | - | - | - |
-| Input of age is integer | 34 | 34 |
-| Calculates Mercury age | 20 | 83 |
-| Calculates Venus age | 20 | 32 |
-| Calculates Mars age | 20 | 10 |
-| Calculates Jupiter age | 20 | 1 |
-| Calculates expected Earth life expectancy years remaining | 30, 78 | 48 |
-| Calculates expected Mercury life expectancy years remaining | 34 | 183 |
-| Calculates expected Venus life expectancy years remaining | 34 | 70 |
-| Calculates expected Mars life expectancy years remaining | 34 | 23 |
-| Calculates expected Jupiter life expectancy years remaining | 34 | 3 |
-| Calculates if past life expectancy, return years they have lived past | 34 | 44 |
+| Compare two words to see if anagrams | "Silent" and "Listen" | These words are anagrams |
+| Comparison should be compared case insensitive | "Tea" and "Eat" | These words are anagrams |
+| Make sure the inputs are words| "Ruby" and "Yurb" | You need to input actual words! |
+| If the input words aren't anagrams, check if antigrams (no letters match) | "Hi" and "Bye" | These words have no letter matches and are antigrams. |
+| Account for multiple words being anagrams or "antigrams." Spaces and punctuation shouldn't count (so they should be removed). You'll need to make sure that each word in the inputted phrases is really a word (passing condition #4 above).| 20 | 1 |
+
 
 
 ## Setup/Installation Requirements
