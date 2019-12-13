@@ -6,7 +6,7 @@
 
 ## Description
 
-_This application will calculate your age on Mercury, Venus, Mars and Jupiter as well as your life expectancy on those planets._
+_The application checks if two words input by the user are anagrams or antigrams with functionality for multiple words._
 
 ## Behavior Driven Development
 
