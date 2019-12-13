@@ -6,8 +6,20 @@ class Anagrams
   end
 
   def compare_words
-    # if (vowel_checker(@word1) == false) | (vowel_checker(@word2) == false)
+    vowel_check1 = @word1.match?(/[aeiouy]/i)
+    vowel_check2 = @word2.match?(/[aeiouy]/i)
+
+    if !vowel_check1 | !vowel_check2
+      return "You need to input actual words!"
+    end
+
+
+
+    # if vowel_test1 == False | vowel_test1 == False
     #   return "You need to input actual words!"
+    # end
+
+
     word_dif = @word1.gsub(/[#{@word2}]/i, '') + @word2.gsub(/[#{@word1}]/i, '')
     if word_dif == ""
       return "These words are anagrams"
@@ -18,14 +30,29 @@ class Anagrams
     end
   end
 
-  def vowel_checker(word_to_check)
-    word_to_check.gsub?(/[aeiouy]/i)
-  end
+  # def vowel_checker?
+  #   vowel_test1 = ""
+  #   vowel_test2 = ""
+  #   vowel_test2 = @word2 =~ (/[aeiouy]/i)
+  #   vowel_test1 = @word1 =~ (/[aeiouy]/i)
+  #
+  #   puts vowel_test1
+  #   puts vowel_test2
+  #   # vowel_test = (@word1 =~ (/[aeiouy]/i)) + (@word2 =~ (/[aeiouy]/i))
+  #   # if vowel_test == Nil
+  #     return vowel_test
+  #   # end
+  # end
 
 end
 
-
-# puts "vowel" =~ /[aeiouy]/i
-
+#     anagrams5 = Anagrams.new("Tea", "TBD")
+#     puts anagrams5.compare_words()
+#
+#
+#  # | vowel_checker(@word2) == false
+# # puts "TBD".match(/[aeiouy]/i)
+# puts "TBD".match?(/[aeiouy]/i)
 # anagrams = Anagrams.new("Silent", "Liste")
 # puts anagrams.compare_words()
+#  | (@word2 =~ (/[aeiouy]/i) === false)

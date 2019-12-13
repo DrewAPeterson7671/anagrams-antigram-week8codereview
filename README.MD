@@ -14,7 +14,7 @@ _The application checks if two words input by the user are anagrams or antigrams
 | - | - | - |
 | Compare two words to see if anagrams | "Silent" and "Listen" | These words are anagrams |
 | Comparison should be compared case insensitive | "Tea" and "Eat" | These words are anagrams |
-| Make sure the inputs are words| "Ruby" and "Yurb" | You need to input actual words! |
+| Make sure the inputs are words| "Tea" and "TBD" | You need to input actual words! |
 | If the input words aren't anagrams, check if antigrams (no letters match) | "Hi" and "Bye" | These words have no letter matches and are antigrams. |
 | Account for multiple words being anagrams or "antigrams." Spaces and punctuation shouldn't count (so they should be removed). You'll need to make sure that each word in the inputted phrases is really a word (passing condition #4 above).| 20 | 1 |
 
