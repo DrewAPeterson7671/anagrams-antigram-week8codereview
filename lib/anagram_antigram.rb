@@ -1,11 +1,12 @@
 class Anagrams
 
   def initialize(word1, word2)
-    @word1 = word1
-    @word2 = word2
+    @word1 = word1.gsub(/\W/, "")
+    @word2 = word2.gsub(/\W/, "")
   end
 
   def compare_words
+
     vowel_check1 = @word1.match?(/[aeiouy]/i)
     vowel_check2 = @word2.match?(/[aeiouy]/i)
 
@@ -15,7 +16,7 @@ class Anagrams
 
     word_dif = @word1.gsub(/[#{@word2}]/i, '') + @word2.gsub(/[#{@word1}]/i, '')
     if word_dif == ""
-      return "These words are anagrams"
+      return "These words are anagrams."
     elsif word_dif.length == @word1.length + @word2.length
       return "These words have no letter matches and are antigrams."
     elsif word_dif != ""
@@ -24,6 +25,11 @@ class Anagrams
       return "Logic Fail"
     end
   end
+
+  # def punctuation_remove
+  #   @word1 = @word1.gsub(/\W]/, '')
+  # end
+
 
   # def vowel_checker?
   #   vowel_test1 = ""

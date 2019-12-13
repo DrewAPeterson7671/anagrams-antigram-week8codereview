@@ -4,7 +4,7 @@ require('anagram_antigram')
 describe('Anagrams#compare_words') do
   it("returns if the two input words are anagrams") do
     anagrams = Anagrams.new("silent", "listen")
-    expect(anagrams.compare_words()).to(eq("These words are anagrams"))
+    expect(anagrams.compare_words()).to(eq("These words are anagrams."))
   end
   it("returns if the two input words are not anagrams, second word missing character") do
     anagrams2 = Anagrams.new("silent", "liste")
@@ -16,7 +16,7 @@ describe('Anagrams#compare_words') do
   end
   it("test to see if case insensitive") do
     anagrams4 = Anagrams.new("TeA", "Eat")
-    expect(anagrams4.compare_words()).to(eq("These words are anagrams"))
+    expect(anagrams4.compare_words()).to(eq("These words are anagrams."))
   end
   it("Test to see if actual words and contain vowels") do
     anagrams5 = Anagrams.new("Tea", "TBD")
@@ -35,12 +35,20 @@ describe('Anagrams#compare_words') do
     expect(anagrams8.compare_words()).to(eq("These words have no letter matches and are antigrams."))
   end
   it("Test another word set to see if the words are antigrams") do
-    anagrams8 = Anagrams.new("Remember", "Addition")
-    expect(anagrams8.compare_words()).to(eq("These words have no letter matches and are antigrams."))
+    anagrams9 = Anagrams.new("Remember", "Addition")
+    expect(anagrams9.compare_words()).to(eq("These words have no letter matches and are antigrams."))
   end
   it("Test another word set for antigrams with intentional fail") do
-    anagrams8 = Anagrams.new("Remember", "Additionr")
-    expect(anagrams8.compare_words()).to(eq("These words are not anagrams.  The letter(s) that are not in both words are: emembeAddition"))
+    anagrams10 = Anagrams.new("Remember", "Additionr")
+    expect(anagrams10.compare_words()).to(eq("These words are not anagrams.  The letter(s) that are not in both words are: emembeAddition"))
+  end
+  it("Test multiple words for anagrams") do
+    anagrams11 = Anagrams.new("I think therefore I am.", "I fear to think I'm here!")
+    expect(anagrams11.compare_words()).to(eq("These words are anagrams."))
+  end
+  it("Test multiple words for antigrams") do
+    anagrams11 = Anagrams.new("Fleet Feet Dream.", "Going upd?")
+    expect(anagrams11.compare_words()).to(eq("These words have no letter matches and are antigrams."))
   end
 
 end
