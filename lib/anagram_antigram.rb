@@ -7,17 +7,16 @@ class Anagrams
 
   def compare_words
     word_dif = @word1.gsub(/[#{@word2}]/i, '')
-    return word_dif
-    # word1_array = @word1.split()
-    # word2_array = @word2.split()
-    # puts word1_array
-    # puts word2_array
+    if word_dif == ""
+      return "These words are anagrams"
+    elsif word_dif != ""
+      return "These words are not anagrams.  The letter(s) that are not in both words are: #{word_dif}"
+    else
+      return "Logic Fail"
+    end
   end
 
 end
 
-# return anagrams = Anagrams.new("silent", "listen")
-# @word1 = "Silent"
-# @word2 = "Listen"
-# word_dif = @word1.gsub(/[#{@word2}]/i, '')
-# return "liste".scan /Silent/i
+# anagrams = Anagrams.new("Silent", "Liste")
+# puts anagrams.compare_words()
