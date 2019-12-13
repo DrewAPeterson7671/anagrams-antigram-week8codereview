@@ -15,7 +15,7 @@ describe('Anagrams#compare_words') do
     expect(anagrams3.compare_words()).to(eq("These words are not anagrams.  The letter(s) that are not in both words are: t"))
   end
   it("test to see if case insensitive") do
-    anagrams3 = Anagrams.new("TeA", "Eat")
-    expect(anagrams3.compare_words()).to(eq("These words are not anagrams.  The letter(s) that are not in both words are: t"))
+    anagrams4 = Anagrams.new("TeA", "Eat")
+    expect(anagrams4.compare_words()).to(eq("These words are anagrams"))
   end
 end

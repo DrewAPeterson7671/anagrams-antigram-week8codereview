@@ -6,7 +6,7 @@ class Anagrams
   end
 
   def compare_words
-    word_dif = @word1.gsub(/[#{@word2}]/, '') + @word2.gsub(/[#{@word1}]/, '')
+    word_dif = @word1.gsub(/[#{@word2}]/i, '') + @word2.gsub(/[#{@word1}]/i, '')
     if word_dif == ""
       return "These words are anagrams"
     elsif word_dif != ""
