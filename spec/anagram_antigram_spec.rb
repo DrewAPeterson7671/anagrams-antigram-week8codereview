@@ -32,7 +32,15 @@ describe('Anagrams#compare_words') do
   end
   it("Test to see if the words are antigrams") do
     anagrams8 = Anagrams.new("Hi", "Bye")
-    expect(anagrams8.compare_words()).to(eq("These words are antigrams!"))
+    expect(anagrams8.compare_words()).to(eq("These words have no letter matches and are antigrams."))
+  end
+  it("Test another word set to see if the words are antigrams") do
+    anagrams8 = Anagrams.new("Remember", "Addition")
+    expect(anagrams8.compare_words()).to(eq("These words have no letter matches and are antigrams."))
+  end
+  it("Test another word set for antigrams with intentional fail") do
+    anagrams8 = Anagrams.new("Remember", "Additionr")
+    expect(anagrams8.compare_words()).to(eq("These words are not anagrams.  The letter(s) that are not in both words are: emembeAddition"))
   end
 
 end
