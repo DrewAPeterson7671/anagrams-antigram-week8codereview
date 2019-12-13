@@ -22,6 +22,14 @@ describe('Anagrams#compare_words') do
     anagrams5 = Anagrams.new("Tea", "TBD")
     expect(anagrams5.compare_words()).to(eq("You need to input actual words!"))
   end
-
+  it("Test to see if actual words and contain vowels") do
+    anagrams6 = Anagrams.new("FHC", "Gerald")
+    expect(anagrams6.compare_words()).to(eq("You need to input actual words!"))
+  end
+  it("Test to see if actual words and contain vowels") do
+    anagrams7 = Anagrams.new("FHC", "Gerald")
+    expect(anagrams7.compare_words()).to(eq("You need to input actual words!"))
+  end
+  
 
 end

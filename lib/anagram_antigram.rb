@@ -13,13 +13,6 @@ class Anagrams
       return "You need to input actual words!"
     end
 
-
-
-    # if vowel_test1 == False | vowel_test1 == False
-    #   return "You need to input actual words!"
-    # end
-
-
     word_dif = @word1.gsub(/[#{@word2}]/i, '') + @word2.gsub(/[#{@word1}]/i, '')
     if word_dif == ""
       return "These words are anagrams"
@@ -45,14 +38,3 @@ class Anagrams
   # end
 
 end
-
-#     anagrams5 = Anagrams.new("Tea", "TBD")
-#     puts anagrams5.compare_words()
-#
-#
-#  # | vowel_checker(@word2) == false
-# # puts "TBD".match(/[aeiouy]/i)
-# puts "TBD".match?(/[aeiouy]/i)
-# anagrams = Anagrams.new("Silent", "Liste")
-# puts anagrams.compare_words()
-#  | (@word2 =~ (/[aeiouy]/i) === false)
