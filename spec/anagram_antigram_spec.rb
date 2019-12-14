@@ -46,9 +46,9 @@ describe('Anagrams#compare_words') do
     anagrams11 = Anagrams.new("I think therefore I am.", "I fear to think I'm here!")
     expect(anagrams11.compare_words()).to(eq("These words are anagrams."))
   end
-  it("Test multiple words for antigrams") do
-    anagrams11 = Anagrams.new("Fleet Feet Dream.", "Going up?")
-    expect(anagrams11.compare_words()).to(eq("These words have no letter matches and are antigrams."))
+  it("Test multiple words for antigrams2") do
+    anagrams12 = Anagrams.new("Fleet Feet Dream.", "Going up?")
+    expect(anagrams12.compare_words()).to(eq("These words have no letter matches and are antigrams."))
   end
 
 end

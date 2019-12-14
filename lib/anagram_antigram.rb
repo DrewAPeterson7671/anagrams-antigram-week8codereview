@@ -11,10 +11,10 @@ class Anagrams
       return "You need to input actual words!"
     end
 
-    word_dif = @word1.gsub(/[#{@word2}]/i, '') + @word2.gsub(/[#{@word1}]/i, '')
+    word_dif = word_dif()
     if word_dif == ""
       return "These words are anagrams."
-    elsif word_dif.length == @word1.length + @word2.length
+    elsif word_dif.length == word_length()
       return "These words have no letter matches and are antigrams."
     elsif word_dif != ""
       return "These words are not anagrams.  The letter(s) that are not in both words are: #{word_dif}"
@@ -30,4 +30,13 @@ class Anagrams
   def vowel_check(vowel_word)
     return vowel_word.match?(/[aeiouy]/i)
   end
+
+  def word_dif
+    return @word1.gsub(/[#{@word2}]/i, '') + @word2.gsub(/[#{@word1}]/i, '')
+  end
+
+  def word_length
+    return @word1.length + @word2.length
+  end
+
 end

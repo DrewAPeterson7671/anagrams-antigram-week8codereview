@@ -26,6 +26,7 @@ _The application checks if two words input by the user are anagrams or antigrams
 * Clone the project locally from github.
 * Install Bundler if you do not already have it by running gem install bundler in the terminal.
 * Run bundle install to manage gems; if you make additional changes to the Gemfile, you will need to run this command again.
+* From terminal, in the projects main directory, type "Ruby anagram_antigram_script.rb".
 
 
 ## Known Bugs
@@ -42,7 +43,7 @@ _Ruby 2.5.1 with rspec and pry gems and Bundler_
 
 ### License
 
-*GPL.}*
+*GPL*
 
 
 
