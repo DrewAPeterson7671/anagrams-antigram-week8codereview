@@ -1,7 +1,5 @@
 # _Anagrams and Antigrams_
 
-#### _Calculates your age on different planets, 11/15/2019_
-
 #### By _**Drew Peterson**_
 
 ## Description
